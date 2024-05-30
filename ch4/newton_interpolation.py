@@ -8,12 +8,19 @@ def divided_differences(points: np.ndarray):
     n = points.shape[0]
 
     result = np.ndarray()
-    # for i in range(1, n + 1):
-    #     for j in range(1, i + 1):
-    #         result.
 
-    return result
-def newton_interpolation_forward(points: np.ndarray, approx_point):
+    f = np.empty([n + 1, n + 1])
     
+    for i in range(n + 1):
+        f[i][0] = points[i][1]
+        print(f[i][0])
 
-print(lagrange_interpolation(points, approx_point))
+    for i in range(1, n + 1):
+        for j in range(1, i + 1):
+            f[i][j] = (f[i][j - 1] - f[i - 1][j - 1]) / (points[0][i] - points[0][i - j])
+
+    return f
+def newton_interpolation_forward(points: np.ndarray, approx_point):
+    pass
+
+print(newton_interpolation_forward(points, approx_point))
