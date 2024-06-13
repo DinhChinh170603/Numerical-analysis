@@ -1,8 +1,12 @@
+# Chúng ta sẽ sử dụng hàm g(x) = sqrt(x) vì hàm này không thỏa mãn các giả thuyết 
+# của Định lý 2.3 do không liên tục và không có đạo hàm nhỏ hơn 1 trên toàn đoạn
+# [0,1], nhưng nó vẫn có một điểm bất động duy nhất tại x = 0
+
 import math
 
-# Định nghĩa hàm g(x) theo bài toán
+# Định nghĩa hàm g(x)
 def g(x):
-    return math.cos(x)
+    return math.sqrt(x)
 
 # Phương pháp điểm bất động
 def fixpoint_method(p0, TOL, max_iteration):
@@ -32,8 +36,8 @@ def fixpoint_method(p0, TOL, max_iteration):
     return None
 
 # Khởi tạo các tham số
-p0 = 0.5  # Giá trị ban đầu
-TOL = 1e-5  # Ngưỡng sai số chấp nhận được 
+p0 = 0.5  # Giá trị ban đầu (bắt đầu gần giá trị thực)
+TOL = 1e-4  # Ngưỡng sai số chấp nhận được
 max_iteration = 100  # Số lần lặp tối đa
 
 # Gọi hàm fixpoint_method để thực hiện phương pháp điểm bất động

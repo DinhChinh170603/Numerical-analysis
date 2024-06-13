@@ -2,7 +2,7 @@ import math
 
 # Định nghĩa hàm g(x) theo bài toán
 def g(x):
-    return math.cos(x)
+    return math.pi + 0.5 * math.sin(x / 2)
 
 # Phương pháp điểm bất động
 def fixpoint_method(p0, TOL, max_iteration):
@@ -32,8 +32,8 @@ def fixpoint_method(p0, TOL, max_iteration):
     return None
 
 # Khởi tạo các tham số
-p0 = 0.5  # Giá trị ban đầu
-TOL = 1e-5  # Ngưỡng sai số chấp nhận được 
+p0 = 0  # Giá trị ban đầu
+TOL = 1e-2  # Ngưỡng sai số chấp nhận được (10^-2)
 max_iteration = 100  # Số lần lặp tối đa
 
 # Gọi hàm fixpoint_method để thực hiện phương pháp điểm bất động

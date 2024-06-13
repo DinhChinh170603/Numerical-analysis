@@ -2,7 +2,7 @@ import math
 
 # Định nghĩa hàm f(x)
 def func(x):
-    return x - 2*math.sin(x)  #8 f(x) = x - tan(x) #9 e**x - 2 - cos(e**x - 2)
+    return #7 x - 2*math.sin(x)  #8 f(x) = x - tan(x) #9 e**x - 2 - cos(e**x - 2)
 
 # Khởi tạo các giá trị đầu cuối
 a = 0

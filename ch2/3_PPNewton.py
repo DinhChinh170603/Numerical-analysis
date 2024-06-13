@@ -1,5 +1,5 @@
 def func(x):
-    return x ** 2 - 6  # Hàm số f(x) = x^2 - 6
+    return 230*x**4 + 18*x**3 + 9*x**2 - 221*x - 9
 
 def diff_func(x):
     return (func(x + 1e-9) - func(x)) / (1e-9)  # Đạo hàm số f(x) sử dụng sai phân tiến

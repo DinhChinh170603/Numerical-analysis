@@ -40,8 +40,8 @@ def gaussian_elimination(A):
 
 # Ví dụ sử dụng
 if __name__ == "__main__":
-    A = np.array([[2, 1, -1, 8],
-                  [-3, -1, 2, -11],
-                  [-2, 1, 2, -3]], dtype=float)
+    A = np.array([[1/4, 1/5, 1/6, 9],
+                [1/3, 1/4, 1/5, 8],
+                [1/2, 1, 2, 8]], dtype=float)
     solution = gaussian_elimination(A)
     print("Nghiệm của hệ phương trình là:", solution)
